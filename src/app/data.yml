@@ -1,0 +1,61 @@
+SocialMedia:
+  - "LinkedIn"
+  - "Github"
+SkillSet:
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+  - {
+      name: ".Net",
+      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
+    }
+Tools:
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+  - {
+      name: "Visual Studio",
+      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+    }
+Experience:
+  - { name: "Empite", description: "Empite.pty.ltd", website: "Empite.com" }
+Blogs:
+  - "Create a blog"

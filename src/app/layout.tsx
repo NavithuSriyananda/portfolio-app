@@ -1,6 +1,12 @@
+//Styles
 import './globals.css'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
+import NavBar from '@/components/app/navbar/NavBar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Footer from '@/components/app/footer/Footer'
+import Header from '@/components/app/header/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +20,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" >
+      <body className={`${inter.className} 
+      bg-white dark:bg-black
+      transition-colors duration-700`}>
+        {/* <Header /> */}
+        <NavBar />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }
