@@ -1,6 +1,6 @@
-SocialMedia:
-  - "LinkedIn"
-  - "Github"
+SocialMediaList:
+  - { name: "LinkedIn", icon: "", url: "" }
+  - { name: "Github", icon: "", url: "" }
 SkillSet:
   - {
       name: ".Net",
@@ -47,15 +47,15 @@ Tools:
       name: "Visual Studio",
       icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
     }
+JobExperience:
   - {
-      name: "Visual Studio",
-      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
+      name: "Empite",
+      description: "Empite.pty.ltd",
+      website: "Empite.com",
+      from: "2022-12-01",
+      to: "2023-08-30",
+      projectExperiences:
+        [{ name: "", description: "" }, { name: "", description: "" }],
     }
-  - {
-      name: "Visual Studio",
-      icon: "https://drive.google.com/uc?id=1H0iiy4NiuPgCVR0TxvnJM8cXvcnstvHV",
-    }
-Experience:
-  - { name: "Empite", description: "Empite.pty.ltd", website: "Empite.com" }
 Blogs:
   - "Create a blog"
