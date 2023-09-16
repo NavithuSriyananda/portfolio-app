@@ -1,36 +1,36 @@
-export interface DataModel {
-  SocialMediaList: Array<SocialMedia>;
+export type AboutPageModel = {
   SkillSet: Array<Skill>;
   Tools: Array<Tool>;
   JobExperience: Array<Experience>;
-}
+  Projects: Array<Project>;
+};
 
-interface Experience {
+export type Experience = {
   name: string;
   description: string;
   website: string;
   from: Date;
   to: Date;
   projectExperiences: Array<ProjectExperience>;
-}
+};
 
-interface ProjectExperience {
+export type ProjectExperience = {
   name: string;
   description: string;
-}
+};
 
-export interface Skill {
+export type Skill = {
   name: string;
   icon: string;
-}
+};
 
-export interface Tool {
+export type Tool = {
   name: string;
   icon: string;
-}
+};
 
-export interface SocialMedia {
+export type Project = {
   name: string;
-  icon: string;
-  url: string;
-}
+  description: string;
+  links: Array<string>;
+};

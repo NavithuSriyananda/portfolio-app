@@ -2,12 +2,18 @@ import 'server-only' // Server only
 
 import Yaml from 'js-yaml'
 import fs from 'fs'
-import { DataModel } from '@/models/app/DataModel';
+import { AboutPageModel } from '@/models/AboutPageModel';
 import { NextFetchEvent } from 'next/server';
 import { NextApiRequest, NextApiResponse } from 'next';
+import { FooterModel } from '@/models/FooterModel';
 
 async function getData() {
-    const data = Yaml.load(fs.readFileSync('./src/app/data.yml', 'utf8')) as DataModel;
+    const data = Yaml.load(fs.readFileSync('./src/app/experience/experience.yml', 'utf8')) as AboutPageModel;
+    return data;
+}
+
+async function getFooterData() {
+    const data = Yaml.load(fs.readFileSync('./src/app/footer.yml', 'utf8')) as FooterModel;
     return data;
 }
 
@@ -33,4 +39,4 @@ async function _handler(
     }
 }
 
-export { getData, getResumeFile }
+export { getData, getFooterData, getResumeFile }

@@ -1,0 +1,4 @@
+@tailwind components;
+
+@import "../../components/experience/SkillCard.module.css";
+@import "../../components/experience/ToolCard.module.css";

@@ -1,6 +1,3 @@
-SocialMediaList:
-  - { name: "LinkedIn", icon: "", url: "" }
-  - { name: "Github", icon: "", url: "" }
 SkillSet:
   - {
       name: ".Net",
@@ -57,5 +54,3 @@ JobExperience:
       projectExperiences:
         [{ name: "", description: "" }, { name: "", description: "" }],
     }
-Blogs:
-  - "Create a blog"

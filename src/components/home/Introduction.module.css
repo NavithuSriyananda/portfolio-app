@@ -1,0 +1,33 @@
+@tailwind components;
+
+@layer components {
+  .typewriter {
+    @apply col-span-1 row-span-1 h-full items-center justify-center flex text-5xl;
+    @apply before:bg-black/50 before:absolute before:top-10 before:h-[0.2rem] before:w-[30%] before:rotate-6;
+    @apply after:bg-black/50 after:block after:absolute after:bottom-10 after:h-[0.2rem] after:w-[30%] after:-rotate-6;
+  }
+
+  .typewriter-wrapper {
+    @apply bg-white;
+  }
+
+  .avatar {
+    @apply col-span-1 row-span-1 h-full  overflow-hidden;
+  }
+
+  .parent {
+    @apply flex flex-col justify-center items-center w-full h-full;
+    transform-style: preserve-3d;
+  }
+
+  .inner {
+    @apply flex flex-col justify-center items-center text-black;
+    transform-style: preserve-3d;
+    transform: translateZ(60px);
+  }
+
+  .inner-inner {
+    @apply flex flex-col justify-center items-center absolute bottom-5 text-neutral-600;
+    transform: translateZ(100px);
+  }
+}
