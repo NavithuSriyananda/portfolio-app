@@ -1,39 +1,43 @@
-.dark-button {
-  @apply relative;
-  @apply text-3xl text-center hover:cursor-pointer;
-  @apply bg-white/50 dark:bg-black/40;
-  @apply rounded-2xl;
-  @apply shadow-[inset_0px_0px_10px_0px_rgb(0,0,0,0.8)] dark:shadow-[inset_0px_0px_10px_0px_rgb(0,0,0,0.8)];
-}
+@tailwind components;
 
-.sun-icon {
-  @apply relative;
-  @apply text-yellow-600;
-  @apply mr-1 mt-1;
-  @apply opacity-100 dark:opacity-20;
-  @apply translate-x-1;
-  @apply transition-all duration-200;
-  @apply z-[999];
-}
+@layer components {
+  .dark-button {
+    @apply relative;
+    @apply text-3xl text-center hover:cursor-pointer;
+    @apply bg-white/50 dark:bg-black/40;
+    @apply rounded-2xl;
+    @apply shadow-[inset_0px_0px_10px_0px_rgb(0,0,0,0.8)] dark:shadow-[inset_0px_0px_10px_0px_rgb(0,0,0,0.8)];
+  }
 
-.moon-icon {
-  @apply relative;
-  @apply text-neutral-500;
-  @apply mr-1 mt-1;
-  @apply opacity-30 dark:opacity-100;
-  @apply -translate-x-1;
-  @apply transition-all duration-200;
-  @apply z-[999];
-}
+  .sun-icon {
+    @apply relative;
+    @apply text-yellow-600;
+    @apply mr-1 mt-1;
+    @apply opacity-100 dark:opacity-20;
+    @apply translate-x-1;
+    @apply transition-all duration-200;
+    @apply z-[999];
+  }
 
-.dark-button-switch {
-  @apply rounded-2xl;
-  @apply bg-black;
-  @apply absolute w-[60%] h-[90%] top-0 mt-[0.1rem] translate-x-[5%];
-  @apply transition-all ease-in-out duration-700;
-  @apply shadow-[0px_2px_15px_rgb(0,0,0,1)];
-  @apply dark:shadow-[0px_2px_15px_rgb(235,150,0,1)];
-  @apply dark:translate-x-[60%];
-  @apply dark:bg-yellow-600;
-  @apply z-[0];
+  .moon-icon {
+    @apply relative;
+    @apply text-neutral-500;
+    @apply mr-1 mt-1;
+    @apply opacity-30 dark:opacity-100;
+    @apply -translate-x-1;
+    @apply transition-all duration-200;
+    @apply z-[999];
+  }
+
+  .dark-button-switch {
+    @apply rounded-2xl;
+    @apply bg-black;
+    @apply absolute w-[60%] h-[90%] top-0 mt-[0.1rem] translate-x-[5%];
+    @apply transition-all ease-in-out duration-700;
+    @apply shadow-[0px_2px_15px_rgb(0,0,0,1)];
+    @apply dark:shadow-[0px_2px_15px_rgb(235,150,0,1)];
+    @apply dark:translate-x-[60%];
+    @apply dark:bg-yellow-600;
+    @apply z-[0];
+  }
 }

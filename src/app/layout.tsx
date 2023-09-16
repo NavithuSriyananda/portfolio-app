@@ -1,4 +1,4 @@
-import "server-only"
+import "server-only";
 
 //Styles
 import './globals.css'
@@ -8,10 +8,12 @@ import NavBar from '@/components/app/navbar/NavBar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/app/footer/Footer'
-import React from 'react';
+import React, { useReducer } from 'react';
 import { fstat } from 'fs';
 import ParticleBackground from "@/components/app/ParticleBackground";
-
+import AppReducer from '@/utils/reducers/AppReducer';
+import { AppContextProvider } from '@/utils/contexts/AppContext';
+import PageLoader from '@/components/app/PageLoader';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -21,17 +23,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
-
   return (
-    <html lang="en" >
-      <body className={`${inter.className}`}>
-        <React.StrictMode>
-          <NavBar />
-          {children}
-          <Footer />
-          <ParticleBackground />
-        </React.StrictMode>
-      </body>
-    </html>
+    <React.StrictMode>
+      <AppContextProvider>
+        <html lang="en" >
+          <body className={inter['className']}>
+            <PageLoader />
+            <NavBar />
+            {children}
+            <Footer />
+            <ParticleBackground />
+          </body>
+        </html>
+      </AppContextProvider>
+    </React.StrictMode>
   )
 }

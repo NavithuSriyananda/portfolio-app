@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "../components/app/navbar/NavBar.module.css";
 @import "../components/app/navbar/DarkButton.module.css";
-@import "../components/app/main/SkillCard.module.css";
-@import "../components/app/main/ToolCard.module.css";
+@import "../components/home/Introduction.module.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -68,7 +69,9 @@ body {
 }
 
 .section-header {
-  @apply flex text-3xl bg-white/80 sticky top-20;
+  @apply flex text-5xl bg-white/80 sticky top-20;
+  @apply before:bg-black/50 before:absolute before:top-16 before:h-[0.2rem] before:w-full before:rotate-6;
+  @apply after:bg-black/50 after:block after:absolute after:bottom-16 after:h-[0.2rem] after:w-full after:-rotate-6;
 }
 
 .card-wrapper {

@@ -12,6 +12,9 @@ const nextConfig = {
                 hostname: 'drive.google.com',
             },
         ],
+    },
+    compiler: {
+        styledComponents: true
     }
 };
 
