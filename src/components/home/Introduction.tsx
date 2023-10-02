@@ -1,49 +1,53 @@
 'use client'
 
+//Styles
+import Styles from './Introduction.module.css'
+
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tilt from "react-parallax-tilt";
-import Typewriter from "typewriter-effect";
+import Typewriter, { TypewriterClass } from "typewriter-effect";
 import { faLaptopCode, faUser } from "@fortawesome/free-solid-svg-icons";
+import { UseHomePageContext, UseHomePageContextDispatch } from "@/context/HomePageContext";
+import * as ActionTypes from "../../data/actionTypes/HomePageActionTypes";
+import { HomePageModel } from "@/data/models/pageModels/HomePageModel";
 
-export default function Introduction() {
+export default function Introduction(props: HomePageModel) {
+    const initTypeWriter = (typewriter: TypewriterClass) => {
+        props.TypewriterData.forEach(element => {
+            typewriter.typeString(element)
+                .pauseFor(1000)
+                .deleteAll()
+        });
+        typewriter.start();
+    };
+
     return (
-        <section id="introduction" className="grid grid-cols-2 grid-rows-1 overflow-hidden
-        m-3 h-[50vh]">
+        <section id="introduction" className={`${Styles.introduction}`}>
             {/* Typewriter */}
-            <div className="typewriter">
+            <div className={`${Styles.typewriter}`}>
                 <Typewriter
-                    onInit={(typewriter) => {
-                        typewriter.typeString('Hello World!')
-                            .callFunction(() => {
-                                console.log('String typed out!');
-                            })
-                            .pauseFor(2500)
-                            .deleteAll()
-                            .callFunction(() => {
-                                console.log('All strings were deleted');
-                            })
-                            .start();
-                    }}
+                    onInit={(typewriter) => initTypeWriter(typewriter)}
                     options={{
                         loop: true,
-                        wrapperClassName: "typewriter-wrapper"
+                        wrapperClassName: Styles.typewriter_wrapper
                     }}
                 />
             </div>
 
             {/* Avatar */}
-            <div className="avatar">
+            <div className={`${Styles.tilt_wrapper}`}>
                 <Tilt
                     perspective={500}
-                    glareEnable={true}
+                    glareEnable={false}
                     glareMaxOpacity={0.45}
                     scale={1.02}
                     gyroscope={true}
-                    className="parent">
-                    <div className="inner">
-                        <FontAwesomeIcon icon={faUser} className="text-[30vh] " />
-                        <div className="inner-inner">
-                            <FontAwesomeIcon icon={faLaptopCode} className="text-[10vh] " />
+                    className={`${Styles.tilt}`}>
+                    <div className={`${Styles.tilt_inner}`}>
+                        <FontAwesomeIcon icon={faUser} className="text-[30vh]" />
+                        <div className={`${Styles.tilt_top_icon}`}>
+                            <FontAwesomeIcon icon={faLaptopCode} className="text-[10vh]" />
                         </div>
                     </div>
                 </Tilt>

@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+  .nav {
+    @apply relative justify-center items-center;
+    @apply backdrop-blur-sm bg-neutral-50/90 dark:bg-white/30 sticky;
+    @apply top-0 z-[1] flex flex-row h-16 min-w-full;
+    @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
+  }
+
+  .nav.scrolled {
+    @apply shadow-[0px_10px_30px_0px_rgb(51,51,54,0.26)];
+    @apply transition-shadow duration-100 ease-in-out;
+  }
+
+  .nav_item {
+    @apply flex flex-row items-center h-full;
+    @apply uppercase px-10 gap-1;
+    /* @apply px-5 py-3 rounded-lg; */
+    @apply relative;
+    @apply cursor-pointer shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]  hover:bg-neutral-100;
+    @apply after:transition-transform after:duration-300 after:ease-in-out after:absolute after:bottom-[0rem] after:left-0 after:block after:h-[0.2rem] after:w-full after:origin-bottom-right after:scale-x-0;
+    @apply after:bg-black after:content-[''] after:hover:origin-bottom-left after:hover:scale-x-100;
+  }
+
+  .nav_item.current {
+    @apply bg-neutral-200;
+    @apply shadow-[inset_0px_0px_4px_1px_rgb(51,51,54,0.26)];
+    @apply border-b-2 border-black;
+  }
+}

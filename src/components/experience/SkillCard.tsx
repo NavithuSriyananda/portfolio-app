@@ -1,13 +1,17 @@
 'use client'
 
-import { Skill } from "@/models/AboutPageModel";
+//Styles
+import Styles from './SkillCard.module.css'
+
+import { Skill } from '@/data/models/pageModels/ExperiencePageModel'
 import Image from 'next/image'
 
 export default function SkillCard(skill: Skill) {
     return (
-        <div className='skill-card'>
+        <div className={`${Styles.skill_card}`}>
             <div className="aspect-square w-full relative">
                 <Image
+                    priority
                     className="rounded-t-lg"
                     src={skill.icon}
                     fill

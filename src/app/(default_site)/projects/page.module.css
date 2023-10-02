@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .projects_wrapper {
+    @apply gap-10 h-auto justify-center items-center text-center;
+  }
+}

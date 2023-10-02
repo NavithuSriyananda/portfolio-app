@@ -1,0 +1,23 @@
+@tailwind components;
+
+.project_section {
+  @apply flex flex-row m-5 p-5 rounded-lg bg-white/80;
+  @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
+}
+
+.project_left_pane {
+  @apply basis-1/4 items-center justify-center;
+}
+
+.project_logo_wrapper {
+  @apply w-full aspect-square sticky top-28;
+}
+
+.project_right_pane {
+  @apply flex flex-col basis-3/4;
+  @apply items-center justify-center;
+}
+
+.project_header {
+  @apply text-[6vh] bg-white/90;
+}
