@@ -2,14 +2,14 @@
 
 @layer components {
   .introduction {
-    @apply grid grid-cols-3 grid-rows-1 overflow-hidden
-    m-3 h-[50vh] divide-x-2 divide-solid;
+    @apply grid grid-cols-3 grid-rows-1 overflow-hidden relative
+    mt-10 mb-10 h-[50vh] divide-x-2 divide-solid;
   }
 
   .typewriter {
-    @apply col-span-2 row-span-1 h-full items-center justify-center flex text-5xl
-     before:bg-black/50 before:absolute before:top-10 before:h-[0.2rem] before:w-[40%] before:rotate-6
-     after:bg-black/50 after:block after:absolute after:bottom-10 after:h-[0.2rem] after:w-[40%] after:-rotate-6;
+    @apply col-span-2 row-span-1 items-center justify-center flex text-5xl relative
+     before:bg-gradient-to-r before:from-color-1 before:to-color-2 before:from-50% before:absolute before:top-0 before:left-10 before:h-[0.2rem] before:w-[25%] 
+     after:bg-gradient-to-r after:from-color-2 after:to-color-1 after:to-50% after:absolute after:bottom-0 after:right-10 after:h-[0.2rem] after:w-[25%];
   }
 
   .typewriter_wrapper {
@@ -26,13 +26,13 @@
   }
 
   .tilt_inner {
-    @apply flex justify-center items-center text-black/80;
+    @apply flex justify-center items-center text-color-1/80 antialiased;
     transform-style: preserve-3d;
     transform: rotateY(-20deg);
   }
 
   .tilt_top_icon {
-    @apply absolute bottom-5 text-black;
+    @apply absolute bottom-5 text-black/80 antialiased;
     transform: translateZ(8vw);
   }
 }

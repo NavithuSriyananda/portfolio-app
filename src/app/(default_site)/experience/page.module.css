@@ -1,30 +1,28 @@
 @tailwind components;
 
-.sections_wrapper {
-  @apply gap-10 h-auto justify-center items-center;
-}
+@layer components {
+  .sections_wrapper {
+    @apply gap-10 h-auto;
+  }
 
-.section {
-  @apply m-5 rounded-lg grid grid-cols-3;
-  /* @apply shadow-[inset_0px_0px_2.5rem_1px_rgb(0,0,0,0.2)]; */
-  /* @apply drop-shadow-lg; */
-  @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
-}
+  .section {
+    @apply flex flex-col justify-center items-center mt-5 mb-5 rounded-lg;
+    /* @apply shadow-[inset_0px_0px_2.5rem_1px_rgb(0,0,0,0.2)]; */
+    /* @apply drop-shadow-lg; */
+    /* @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]; */
+  }
 
-.section_header_wrapper_middle {
-  @apply flex col-span-1 items-center justify-center;
-}
+  .section_header_wrapper {
+    @apply flex w-fit relative items-start justify-center mt-10 mb-10;
+  }
 
-.section_header_wrapper_top {
-  @apply flex col-span-1 items-start justify-center mt-20;
-}
+  .section_header {
+    @apply text-5xl block bg-white/80;
+    @apply before:bg-gradient-to-r before:from-color-1 before:to-color-2 before:absolute before:-top-2   before:left-0 before:h-[0.2rem] before:w-1/2;
+    @apply after:bg-gradient-to-r  after:from-color-2  after:to-color-1  after:absolute  after:-bottom-2 after:right-0 after:h-[0.2rem]  after:w-1/2;
+  }
 
-.section_header {
-  @apply flex text-5xl bg-white/80 sticky top-28;
-  @apply before:bg-black/50 before:block before:absolute before:bottom-16 before:h-[0.2rem] before:w-full;
-  @apply after:bg-black/50 after:absolute after:top-16 after:h-[0.2rem] after:w-full;
-}
-
-.card_wrapper {
-  @apply flex flex-wrap col-span-2 bg-white/80;
+  .card_wrapper {
+    @apply flex flex-wrap items-center justify-center bg-white/80;
+  }
 }

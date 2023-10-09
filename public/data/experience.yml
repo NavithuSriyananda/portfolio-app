@@ -1,50 +1,14 @@
 SkillSet:
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
-  - {
-      name: ".Net",
-      icon: "https://drive.google.com/uc?id=1z9pOrloGbPcO2YfTbxVJN8BtEuR2o02e",
-    }
+  - { name: ".Net Core", icon: "NET-Core.png" }
+  - { name: "EF Core", icon: "EFCore.png" }
+  - { name: "ASP NET Core", icon: "ASPNET-Core.png" }
+  - { name: ".Net Framework", icon: "NET-Framework.png" }
 Tools:
-  - {
-      name: "Visual Studio",
-      icon: "vs.png",
-      website: "https://visualstudio.microsoft.com/vs/",
-    }
-  - {
-      name: "Visual Studio Code",
-      icon: "vscode.png",
-      website: "https://code.visualstudio.com/",
-    }
-  - {
-      name: "Postman",
-      icon: "postman.png",
-      website: "https://www.postman.com/",
-    }
-  - { name: "Docker", icon: "docker.png", website: "https://www.docker.com/" }
-  - { name: "Git", icon: "git.png", website: "https://git-scm.com/" }
+  - { name: "Visual Studio", icon: "vs.png" }
+  - { name: "Visual Studio Code", icon: "vscode.png" }
+  - { name: "Postman", icon: "postman.png" }
+  - { name: "Docker", icon: "docker.png" }
+  - { name: "Git", icon: "git.png" }
 JobExperience:
   - {
       name: "Empite",

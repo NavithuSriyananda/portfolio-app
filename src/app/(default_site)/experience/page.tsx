@@ -7,24 +7,27 @@ import SkillCard from "@/components/experience/SkillCard";
 import ToolCard from "@/components/experience/ToolCard";
 import ExperienceTimeline from "@/components/experience/ExperienceTimeline";
 import { ExperiencePageModel } from "@/data/models/pageModels/ExperiencePageModel";
-import { ReadFileAsync } from "@/libs/FileLibrary";
-import path from "path";
-import { YamlToModel } from "@/libs/YamlLibrary";
+import { YamlFileToModel } from "@/services/YamlFileService";
 
 export default async function ExperiencePage() {
-    var file = await ReadFileAsync(path.join(process.cwd(), 'public/data/experience.yml'), 'utf8');
-    const data = YamlToModel<ExperiencePageModel>(file);
-    //console.log(data);
+    const data = await YamlFileToModel<ExperiencePageModel>('experience.yml');
     return (
         <main className='relative'>
             <div id='section-Wrapper' className={`${Styles.sections_wrapper}`}>
 
                 {/* SkillSet Section */}
                 <section className={`${Styles.section}`}>
-                    <div className={`${Styles.section_header_wrapper_middle}`}>
-                        <h1 className={`${Styles.section_header}`}>Skills</h1>
+                    <div className={`${Styles.section_header_wrapper}`}>
+                        <h1 className={`${Styles.section_header}`}>Technical Skills</h1>
                     </div>
                     <div className={`${Styles.card_wrapper}`}>
+                        {
+                            data.SkillSet?.map((skill, index) => {
+                                return (
+                                    <SkillCard key={index} {...skill} />
+                                )
+                            })
+                        }
                         {
                             data.SkillSet?.map((skill, index) => {
                                 return (
@@ -37,7 +40,7 @@ export default async function ExperiencePage() {
 
                 {/* Tools Section */}
                 <section className={`${Styles.section}`}>
-                    <div className={`${Styles.section_header_wrapper_middle}`}>
+                    <div className={`${Styles.section_header_wrapper}`}>
                         <h1 className={`${Styles.section_header}`}>Tools</h1>
                     </div>
                     <div id='tool-card-wrapper' className={`${Styles.card_wrapper}`}>
@@ -53,7 +56,7 @@ export default async function ExperiencePage() {
 
                 {/* Experience Section */}
                 <section className={`${Styles.section}`}>
-                    <div className={`${Styles.section_header_wrapper_top}`}>
+                    <div className={`${Styles.section_header_wrapper}`}>
                         <h1 className={`${Styles.section_header}`}>Experience</h1>
                     </div>
                     <div id='experience-wrapper' className='bg-white/80 col-span-2'>
