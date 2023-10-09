@@ -6,8 +6,11 @@ import { type Engine, type Container } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import { UseAppContextDispatch } from "../context/AppContext"
 import * as AppActionTypes from "../data/actionTypes/AppActionTypes"
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config.js'
 
 export default function ParticleBackground() {
+    const fullConfig = resolveConfig(tailwindConfig) as any;
     const dispatch = UseAppContextDispatch();
 
     const particlesInit = useCallback(async (engine: Engine) => {
@@ -22,7 +25,7 @@ export default function ParticleBackground() {
     }, [dispatch]);
 
     return (
-        <div className='absolute w-full h-full top-0 left-0 z-[-999]'>
+        <div className='absolute w-full h-full top-0 left-0 -z-website-loader'>
             <Particles
                 id="tsparticles"
                 className='fixed w-full h-full top-0 bottom-0 m-0 p-0'
@@ -30,8 +33,7 @@ export default function ParticleBackground() {
                 loaded={particlesLoaded}
                 options={{
                     backgroundMode: {
-                        enable: true,
-                        zIndex: -999
+                        enable: true
                     },
                     background: {
                         color: {
@@ -49,13 +51,16 @@ export default function ParticleBackground() {
                             }
                         },
                         color: {
-                            value: "#000000"
+                            value: [fullConfig.theme.colors["color-1"] ?? "#000000", fullConfig.theme.colors["color-2"] ?? "#000000"]
                         },
                         shape: {
                             type: "circle",
                             stroke: {
-                                width: 0,
-                                color: "#000000"
+                                width: 1,
+                                color: {
+                                    value: [fullConfig.theme.colors["color-1"] ?? "#000000", fullConfig.theme.colors["color-2"] ?? "#000000"]
+                                },
+                                opacity: 0.2,
                             },
                             polygon: {
                                 nb_sides: 5
@@ -74,7 +79,7 @@ export default function ParticleBackground() {
                         size: {
                             value: {
                                 min: 0,
-                                max: 6
+                                max: 5.5
                             },
                             random: true,
                             anim: {
@@ -86,7 +91,7 @@ export default function ParticleBackground() {
                         },
                         move: {
                             enable: true,
-                            speed: 0.5,
+                            speed: 1,
                             direction: "none",
                             random: true,
                             straight: false,

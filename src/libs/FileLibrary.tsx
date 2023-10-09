@@ -1,27 +1,21 @@
 //Note: Facade Pattern
 import 'server-only';
 
-//#region imports
-import fs, { PathOrFileDescriptor } from 'fs';
-//#endregion imports
+import fs, { promises as fsPromises, PathLike } from 'fs';
 
-//#region functions
 
 /**
  * Asynchronously reads a file.
  * @param {string} filePath [required]
  * @param {BufferEncoding} encoding [required]
- * @returns 
+ * @returns {string} { fileContent: string }
  */
-async function ReadFileAsync(filePath: PathOrFileDescriptor, encoding: BufferEncoding): Promise<string> {
-    const fileBuffer = await fs.readFileSync(filePath, encoding);
-    return fileBuffer;
+async function ReadFileAsync(filePath: PathLike, encoding: BufferEncoding): Promise<string> {
+    const content = fsPromises.readFile(filePath, { encoding: encoding, flag: 'r' });
+    return content;
 }
 
-//#endregion functions
 
-//#region exports 
 export {
     ReadFileAsync
 }
-//#endregion exports

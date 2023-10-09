@@ -5,9 +5,9 @@
     @apply block relative rounded-lg m-4 w-36;
     @apply bg-white dark:bg-neutral-700;
     @apply cursor-pointer;
-    @apply shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)];
+    @apply shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.26)];
     @apply dark:shadow-[0px_4px_12px_0px_rgb(255,255,255,0.1)];
-    @apply hover:shadow-[0px_10px_30px_0px_rgb(51,51,54,0.26)];
+    @apply hover:shadow-[0px_10px_30px_0px_rgb(51,51,54,0.52)];
     @apply dark:hover:shadow-[0px_10px_30px_0px_rgb(255,255,255,0.26)];
     @apply transition-shadow ease-in-out duration-200;
   }

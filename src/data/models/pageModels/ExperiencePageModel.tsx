@@ -22,13 +22,11 @@ export type ProjectExperience = {
 export type Skill = {
   name: string;
   icon: string;
-  website: string;
 };
 
 export type Tool = {
   name: string;
   icon: string;
-  website: string;
 };
 
 export type Project = {

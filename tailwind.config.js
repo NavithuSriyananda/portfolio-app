@@ -8,11 +8,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      zIndex: {
+        'website-loader': 999,
+        'navbar' : 998
       },
+      colors: {
+        'color-1': '#FFA317',
+        'color-2': '#EB1C44',
+        'linear-gradient-1': 'linear-gradient(to right, #FFA317, #EB1C44) 1',
+        'linear-gradient-2': 'linear-gradient(to right, #FFA317, #EB1C44)'
+
+      }
     },
   },
   plugins: [],

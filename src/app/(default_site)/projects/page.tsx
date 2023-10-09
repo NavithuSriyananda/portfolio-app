@@ -4,14 +4,11 @@ import "server-only"
 import Styles from './page.module.css'
 
 import ProjectCard from "@/components/projects/ProjectCard"
-import { ReadFileAsync } from "@/libs/FileLibrary";
 import { ProjectsPageModel } from "@/data/models/pageModels/ProjectsPageModel";
-import { YamlToModel } from "@/libs/YamlLibrary";
-import path from "path";
+import { YamlFileToModel } from "@/services/YamlFileService";
 
 export default async function ProjectsPage() {
-    var file = await ReadFileAsync(path.join(process.cwd(), 'public/data/projects.yml'), 'utf8');
-    const data = YamlToModel<ProjectsPageModel>(file);
+    const data = await YamlFileToModel<ProjectsPageModel>('projects.yml');
     return (
         <main className="relative">
 

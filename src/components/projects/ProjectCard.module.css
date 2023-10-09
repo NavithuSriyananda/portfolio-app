@@ -1,7 +1,7 @@
 @tailwind components;
 
 .project_section {
-  @apply flex flex-row m-5 p-5 rounded-lg bg-white/80;
+  @apply flex flex-row m-5 p-5 rounded-lg;
   @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
 }
 
@@ -14,7 +14,7 @@
 }
 
 .project_right_pane {
-  @apply flex flex-col basis-3/4;
+  @apply flex flex-col basis-3/4 bg-white/80;
   @apply items-center justify-center;
 }
 

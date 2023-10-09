@@ -1,15 +1,12 @@
 import "server-only"
 
 import Introduction from '@/components/home/Introduction';
-import { HomePageContextProvider, UseHomePageContext, UseHomePageContextDispatch } from "@/context/HomePageContext";
-import { ReadFileAsync } from "@/libs/FileLibrary";
-import path from "path";
-import { YamlToModel } from "@/libs/YamlLibrary";
+import { HomePageContextProvider } from "@/context/HomePageContext";
 import { HomePageModel } from "@/data/models/pageModels/HomePageModel";
+import { YamlFileToModel } from "@/services/YamlFileService";
 
 export default async function HomePage() {
-  var file = await ReadFileAsync(path.join(process.cwd(), 'public/data/home.yml'), 'utf8');
-  const homePageData = YamlToModel<HomePageModel>(file);
+  const homePageData = await YamlFileToModel<HomePageModel>('home.yml');
   return (
     <HomePageContextProvider>
       <main className='relative'>

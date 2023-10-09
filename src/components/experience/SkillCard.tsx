@@ -13,7 +13,7 @@ export default function SkillCard(skill: Skill) {
                 <Image
                     priority
                     className="rounded-t-lg"
-                    src={skill.icon}
+                    src={`/images/${skill.icon}`}
                     fill
                     alt="" />
             </div>
@@ -21,7 +21,7 @@ export default function SkillCard(skill: Skill) {
                 <h5 className="text-neutral-800 dark:text-neutral-50">
                     {skill.name}
                 </h5>
-                <p className="text-base text-neutral-600 dark:text-neutral-200">description</p>
+                {/* <p className="text-base text-neutral-600 dark:text-neutral-200">description</p> */}
             </div>
         </div >
     )
