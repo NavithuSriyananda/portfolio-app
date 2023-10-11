@@ -32,6 +32,8 @@
     /* @apply px-5 py-3 rounded-lg; */
     @apply relative;
     @apply cursor-pointer shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]  hover:bg-neutral-100;
+
+    /* Medium Screen */
   }
 
   .nav_item_hover {

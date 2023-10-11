@@ -28,13 +28,6 @@ export default async function ExperiencePage() {
                                 )
                             })
                         }
-                        {
-                            data.SkillSet?.map((skill, index) => {
-                                return (
-                                    <SkillCard key={index} {...skill} />
-                                )
-                            })
-                        }
                     </div>
                 </section>
 
