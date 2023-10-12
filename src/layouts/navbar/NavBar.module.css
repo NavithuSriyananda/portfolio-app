@@ -10,28 +10,18 @@
 
   .nav.scrolled {
     @apply bg-neutral-50/90;
-    @apply shadow-[0px_10px_30px_0px_rgb(51,51,54,0.26)];
+    @apply shadow-[0px_5px_10px_0px_rgb(51,51,54,0.26)];
     @apply transition-shadow duration-100 ease-in-out;
   }
 
-  .nav_logo {
-    --color-1: theme(colors.color-1);
-    --color-2: theme(colors.color-2);
-    @apply absolute z-navbar ml-2 h-full  aspect-square left-0 shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
-  }
-
-  .nav_logo_image {
-    filter: drop-shadow(5px 0px 5px var(--color-1))
-      drop-shadow(10px 0px 5px var(--color-2));
-  }
-
   .nav_item {
-    @apply bg-neutral-50/90 z-navbar;
-    @apply flex flex-row items-center h-full;
+    @apply bg-neutral-50/90 h-full z-navbar;
     @apply uppercase px-10 gap-1;
     /* @apply px-5 py-3 rounded-lg; */
-    @apply relative;
+    @apply relative flex justify-center items-center;
     @apply cursor-pointer shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]  hover:bg-neutral-100;
+
+    /* Medium Screen */
   }
 
   .nav_item_hover {
@@ -48,5 +38,27 @@
     @apply before:absolute before:bottom-0 before:left-0 before:h-[0.2rem] before:w-full;
     @apply before:bg-gradient-to-r before:from-color-1/30 before:to-color-2/30;
     /* @apply border-b-2 border-black/30; */
+  }
+
+  .left {
+    @apply flex w-fit absolute h-full ml-2 z-navbar left-0;
+  }
+
+  .nav_logo {
+    --color-1: theme(colors.color-1);
+    --color-2: theme(colors.color-2);
+    @apply relative flex h-full aspect-square shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
+  }
+
+  .nav_logo_image {
+    filter: drop-shadow(5px 0px 5px var(--color-1))
+      drop-shadow(10px 0px 5px var(--color-2));
+  }
+
+  .center {
+    @apply relative flex flex-row items-center justify-center h-full;
+  }
+  .right {
+    @apply absolute right-0 flex h-full w-fit justify-center items-center mr-2;
   }
 }

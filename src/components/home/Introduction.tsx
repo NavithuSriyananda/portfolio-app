@@ -5,7 +5,7 @@ import Styles from './Introduction.module.css'
 
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Tilt from "react-parallax-tilt";
+import Tilt from 'react-parallax-tilt';
 import Typewriter, { TypewriterClass } from "typewriter-effect";
 import { faLaptopCode, faUser } from "@fortawesome/free-solid-svg-icons";
 import { UseHomePageContext, UseHomePageContextDispatch } from "@/context/HomePageContext";
