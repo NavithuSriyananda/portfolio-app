@@ -1,6 +1,6 @@
 import "server-only"
 
-import Introduction from '@/components/home/Introduction';
+import Introduction from '@/components/(default_site)/Introduction';
 import { HomePageContextProvider } from "@/context/HomePageContext";
 import { HomePageModel } from "@/data/models/pageModels/HomePageModel";
 import { YamlFileToModel } from "@/services/YamlFileService";

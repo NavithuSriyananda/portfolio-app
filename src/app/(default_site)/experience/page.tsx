@@ -3,11 +3,11 @@ import "server-only"
 //Styles
 import Styles from './page.module.css'
 
-import SkillCard from "@/components/experience/SkillCard";
-import ToolCard from "@/components/experience/ToolCard";
-import ExperienceTimeline from "@/components/experience/ExperienceTimeline";
-import { ExperiencePageModel } from "@/data/models/pageModels/ExperiencePageModel";
-import { YamlFileToModel } from "@/services/YamlFileService";
+import SkillCard from '@/components/experience/Skills/SkillCard'
+import ToolCard from '@/components/experience/Tools/ToolCard'
+import ExperienceTimeline from '@/components/experience/ExperienceTimeline/ExperienceTimeline'
+import { ExperiencePageModel } from '@/data/models/pageModels/ExperiencePageModel'
+import { YamlFileToModel } from '@/services/YamlFileService'
 
 export default async function ExperiencePage() {
     const data = await YamlFileToModel<ExperiencePageModel>('experience.yml');
@@ -56,13 +56,15 @@ export default async function ExperiencePage() {
                         {
                             data.JobExperience?.map((experience, index) => {
                                 return (
-                                    <div key={index} className='p-6'>
-                                        <h1 className='text-base text-neutral-600 dark:text-neutral-200 text-center'>{experience.name} - {experience.description}</h1>
-                                    </div>
+                                    <>
+                                        <div key={index} className='p-6'>
+                                            <h1 className='text-base text-neutral-600 dark:text-neutral-200 text-center'>{experience.name} - {experience.description}</h1>
+                                        </div>
+                                        <ExperienceTimeline key={index} isFirst={true} experience={experience} />
+                                    </>
                                 )
                             })
                         }
-                        <ExperienceTimeline />
                     </div>
                 </section>
 

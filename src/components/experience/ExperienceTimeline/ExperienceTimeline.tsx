@@ -1,6 +1,13 @@
 'use client'
 
-export default function ExperienceTimeline() {
+import { Experience } from "@/data/models/pageModels/ExperiencePageModel"
+import Styles from './ExperienceTimeline.module.css'
+
+interface props {
+    experience: Experience,
+    isFirst: boolean
+}
+export default function ExperienceTimeline(props: props) {
     return (
         <ol className="">
 

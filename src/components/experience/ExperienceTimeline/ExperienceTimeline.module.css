@@ -1,0 +1,10 @@
+@tailwind components;
+
+@layer components {
+  .main_wrapper {
+    @apply;
+  }
+  .experience_row {
+    @apply;
+  }
+}
