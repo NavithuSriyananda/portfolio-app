@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .typewriter {
+    @apply col-span-2 row-span-1 items-center justify-evenly flex flex-col text-5xl relative
+         before:bg-gradient-to-r before:from-color-1 before:to-color-2 before:from-50% before:absolute before:top-0 before:left-10 before:h-[0.2rem] before:w-[25%] 
+         after:bg-gradient-to-r after:from-color-2 after:to-color-1 after:to-50% after:absolute after:bottom-0 after:right-10 after:h-[0.2rem] after:w-[25%];
+  }
+
+  .typewriter_wrapper {
+    @apply bg-white;
+  }
+}

@@ -1,0 +1,8 @@
+@tailwind components;
+
+@layer components {
+  .introduction {
+    @apply grid grid-cols-3 grid-rows-1 overflow-hidden relative
+        mt-10 mb-10 h-[50vh] divide-x-2 divide-solid;
+  }
+}

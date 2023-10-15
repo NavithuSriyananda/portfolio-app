@@ -56,12 +56,12 @@ export default async function ExperiencePage() {
                         {
                             data.JobExperience?.map((experience, index) => {
                                 return (
-                                    <>
-                                        <div key={index} className='p-6'>
+                                    <div key={index}>
+                                        <div className='p-6'>
                                             <h1 className='text-base text-neutral-600 dark:text-neutral-200 text-center'>{experience.name} - {experience.description}</h1>
                                         </div>
-                                        <ExperienceTimeline key={index} isFirst={true} experience={experience} />
-                                    </>
+                                        <ExperienceTimeline isFirst={true} experience={experience} />
+                                    </div>
                                 )
                             })
                         }

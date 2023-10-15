@@ -1,3 +1,5 @@
 export type HomePageModel = {
-    TypewriterData: Array<string>
+    StartWording: Array<string>;
+    TypewriterData: Array<string>;
+    EndWording: Array<string>;
 };
