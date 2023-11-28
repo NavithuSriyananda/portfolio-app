@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       zIndex: {
         'website-loader': 999,
-        'navbar' : 998
+        'navbar': 998
       },
       colors: {
         'color-1': '#FFA317',

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import "@fortawesome/fontawesome-svg-core/styles.css";
+@import "../components/projects/ProjectCard.module.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;

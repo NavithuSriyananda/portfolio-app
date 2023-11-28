@@ -1,0 +1,23 @@
+@tailwind components;
+
+@layer components {
+  .tilt_wrapper {
+    @apply col-span-1 row-span-1 h-full  overflow-hidden;
+  }
+
+  .tilt {
+    @apply flex justify-center items-center w-full h-full;
+    transform-style: preserve-3d;
+  }
+
+  .tilt_inner {
+    @apply flex justify-center items-center text-color-1/80 antialiased;
+    transform-style: preserve-3d;
+    transform: rotateY(-20deg);
+  }
+
+  .tilt_top_icon {
+    @apply absolute bottom-5 text-black/80 antialiased;
+    transform: translateZ(8vw);
+  }
+}

@@ -41,7 +41,7 @@
   }
 
   .left {
-    @apply flex w-fit absolute h-full ml-2 z-navbar left-0;
+    @apply flex w-fit absolute h-full ml-2 z-navbar left-0 top-2 bg-white;
   }
 
   .nav_logo {

@@ -1,21 +1,31 @@
-SkillSet:
+skillSet:
   - { name: ".Net Core", icon: "NET-Core.png" }
   - { name: "EF Core", icon: "EFCore.png" }
-  - { name: "ASP NET Core", icon: "ASPNET-Core.png" }
+  - { name: "ASP .NET Core", icon: "ASPNET-Core.png" }
   - { name: ".Net Framework", icon: "NET-Framework.png" }
-Tools:
+tools:
   - { name: "Visual Studio", icon: "vs.png" }
   - { name: "Visual Studio Code", icon: "vscode.png" }
   - { name: "Postman", icon: "postman.png" }
   - { name: "Docker", icon: "docker.png" }
   - { name: "Git", icon: "git.png" }
-JobExperience:
+jobExperience:
   - {
-      name: "Empite",
+      designation: "Software Engineer",
+      company: { name: "Empite Pty Ltd", website: "www.Empite.com" },
+      address : "Colombo, Sri Lanka",
       description: "Empite.pty.ltd",
       website: "Empite.com",
       from: "2022-12-01",
       to: "2023-08-30",
       projectExperiences:
-        [{ name: "", description: "" }, { name: "", description: "" }],
+        [
+          {
+            name: "Good2Give",
+            description: "",
+            responsibilities: ["asd", "asd"],
+            techstack: ["", ""],
+            tools: ["", ""],
+          },
+        ],
     }
