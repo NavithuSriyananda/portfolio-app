@@ -14,7 +14,7 @@ export default async function HomePage() {
     <HomePageContextProvider>
       <main className='relative'>
         <section id="introduction" className={`${Styles.introduction}`}>
-          < TypeWriter {...homePageData} />
+          <TypeWriter {...homePageData} />
           <Avatar />
         </section>
       </main>

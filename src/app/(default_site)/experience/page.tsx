@@ -22,7 +22,7 @@ export default async function ExperiencePage() {
                     </div>
                     <div className={`${Styles.card_wrapper}`}>
                         {
-                            data.SkillSet?.map((skill, index) => {
+                            data.skillSet?.map((skill, index) => {
                                 return (
                                     <SkillCard key={index} {...skill} />
                                 )
@@ -38,7 +38,7 @@ export default async function ExperiencePage() {
                     </div>
                     <div id='tool-card-wrapper' className={`${Styles.card_wrapper}`}>
                         {
-                            data.Tools?.map((tool, index) => {
+                            data.tools?.map((tool, index) => {
                                 return (
                                     <ToolCard key={index} {...tool} />
                                 )
@@ -52,19 +52,21 @@ export default async function ExperiencePage() {
                     <div className={`${Styles.section_header_wrapper}`}>
                         <h1 className={`${Styles.section_header}`}>Experience</h1>
                     </div>
-                    <div id='experience-wrapper' className='bg-white/80 col-span-2'>
-                        {
-                            data.JobExperience?.map((experience, index) => {
-                                return (
-                                    <div key={index}>
-                                        <div className='p-6'>
-                                            <h1 className='text-base text-neutral-600 dark:text-neutral-200 text-center'>{experience.name} - {experience.description}</h1>
+                    <div id='experience-wrapper' className='bg-white/80 col-span-2'>\
+
+                        <ol className="">
+                            {
+                                data.jobExperience?.map((experience, index) => {
+                                    return (
+                                        <div key={index}>
+                                            <div className='p-6'>
+                                            </div>
+                                            <ExperienceTimeline isFirst={true} experience={experience} />
                                         </div>
-                                        <ExperienceTimeline isFirst={true} experience={experience} />
-                                    </div>
-                                )
-                            })
-                        }
+                                    )
+                                })
+                            }
+                        </ol>
                     </div>
                 </section>
 

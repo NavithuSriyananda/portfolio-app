@@ -1,12 +1,13 @@
-export type ExperiencePageModel = {
-  SkillSet: Array<Skill>;
-  Tools: Array<Tool>;
-  JobExperience: Array<Experience>;
-  Projects: Array<Project>;
+export interface ExperiencePageModel {
+  skillSet: Array<Skill>;
+  tools: Array<Tool>;
+  jobExperience: Array<Experience>;
 };
 
 export type Experience = {
-  name: string;
+  designation: string;
+  company: Company;
+  address: string;
   description: string;
   website: string;
   from: Date;
@@ -17,6 +18,10 @@ export type Experience = {
 export type ProjectExperience = {
   name: string;
   description: string;
+  website: string;
+  responsibilities: Array<string>;
+  techstack: Array<string>;
+  tools: Array<string>;
 };
 
 export type Skill = {
@@ -34,3 +39,8 @@ export type Project = {
   description: string;
   links: Array<string>;
 };
+
+export type Company = {
+  name: string;
+  website: string;
+}
