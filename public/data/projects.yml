@@ -21,7 +21,7 @@ Projects:
     }
   - {
       title: "Nova Control Center",
-      logo: "NovaControlCenterLogo.png",
+      logo: "nova.png",
       description: "Windows application",
       links:
         [

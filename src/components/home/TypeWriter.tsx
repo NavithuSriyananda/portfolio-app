@@ -6,14 +6,14 @@ import { HomePageModel } from "@/data/models/pageModels/HomePageModel";
 import parse from 'html-react-parser'
 
 export default function TypeWriter(props: HomePageModel) {
-    const initTypeWriter = (typewriter: TypewriterClass) => {
-        props.TypewriterData?.map(element => {
-            typewriter.typeString(element)
-                .pauseFor(1000)
-                .deleteAll()
-        });
+
+    const initTypeWriter = (typewriter: TypewriterClass, element: string) => {
+        typewriter.typeString(element)
+        // .pauseFor(1000)
+        // .deleteAll()
         typewriter.start();
     };
+
     return (
         <div className={`${Styles.typewriter}`}>
             {
@@ -21,13 +21,23 @@ export default function TypeWriter(props: HomePageModel) {
                     return (<p key={index}>{parse(element)}</p>)
                 })
             }
-            <Typewriter
-                onInit={(typewriter) => initTypeWriter(typewriter)}
-                options={{
-                    loop: true,
-                    wrapperClassName: Styles.typewriter_wrapper
-                }}
-            />
+
+            {
+                props.TypewriterData?.map(element => {
+                    return (
+                        <Typewriter
+                            key={element}
+                            onInit={(typewriter) => initTypeWriter(typewriter, element)}
+                            options={{
+                                loop: false,
+                                wrapperClassName: Styles.typewriter_wrapper,
+                                delay: 60
+                            }}
+                        />
+                    )
+                })
+            }
+
             {
                 props.EndWording.map((element, index) => {
                     return (<p key={index}>{parse(element)}</p>)

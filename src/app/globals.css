@@ -9,7 +9,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,4 +47,12 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@layer utilities {
+  .gradient-line-animation {
+    @apply before:bg-gradient-to-r  before:from-color-2  before:to-color-1  before:absolute  before:-bottom-2 before:right-0 before:h-[0.2rem]  before:w-1/2;
+    @apply after:bg-gradient-to-r after:from-color-1 after:to-color-2 after:absolute after:-top-2 after:left-0 after:h-[0.2rem] after:w-1/2;
+    @apply before:animate-enter-from-left after:animate-enter-from-right;
+  }
 }

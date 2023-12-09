@@ -18,7 +18,7 @@ export default async function ExperiencePage() {
                 {/* SkillSet Section */}
                 <section className={`${Styles.section}`}>
                     <div className={`${Styles.section_header_wrapper}`}>
-                        <h1 className={`${Styles.section_header}`}>Technical Skills</h1>
+                        <h1 className={`${Styles.section_header} gradient-line-animation`}>Technical Skills</h1>
                     </div>
                     <div className={`${Styles.card_wrapper}`}>
                         {
@@ -34,7 +34,7 @@ export default async function ExperiencePage() {
                 {/* Tools Section */}
                 <section className={`${Styles.section}`}>
                     <div className={`${Styles.section_header_wrapper}`}>
-                        <h1 className={`${Styles.section_header}`}>Tools</h1>
+                        <h1 className={`${Styles.section_header} gradient-line-animation`}>Tools</h1>
                     </div>
                     <div id='tool-card-wrapper' className={`${Styles.card_wrapper}`}>
                         {
@@ -50,7 +50,7 @@ export default async function ExperiencePage() {
                 {/* Experience Section */}
                 <section className={`${Styles.section}`}>
                     <div className={`${Styles.section_header_wrapper}`}>
-                        <h1 className={`${Styles.section_header}`}>Experience</h1>
+                        <h1 className={`${Styles.section_header} gradient-line-animation`}>Experience</h1>
                     </div>
                     <div id='experience-wrapper' className='bg-white/80 col-span-2'>\
 

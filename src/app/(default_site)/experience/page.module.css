@@ -18,8 +18,6 @@
 
   .section_header {
     @apply text-5xl block bg-white/80;
-    @apply before:bg-gradient-to-r before:from-color-1 before:to-color-2 before:absolute before:-top-2   before:left-0 before:h-[0.2rem] before:w-1/2;
-    @apply after:bg-gradient-to-r  after:from-color-2  after:to-color-1  after:absolute  after:-bottom-2 after:right-0 after:h-[0.2rem]  after:w-1/2;
   }
 
   .card_wrapper {
