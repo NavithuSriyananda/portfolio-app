@@ -7,7 +7,11 @@ import { FooterModel } from "@/data/models/FooterModel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 
-export default function Footer() {
+interface props {
+    AppVersion: string
+}
+
+export default function Footer(props: props) {
     const data: FooterModel = {
         Address: "Colombo, Sri Lanka",
         Email: "navithusriyananda@gmail.com",
@@ -97,7 +101,7 @@ export default function Footer() {
 
             {/* <!--Copyright section--> */}
             <div className=" bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-                <span>© 2023 Copyright : </span>
+                <span>v{props.AppVersion} ©2023 Copyright : </span>
                 <span className="font-semibold text-neutral-600 dark:text-neutral-400">
                     Navithu Sriyananda
                 </span>
