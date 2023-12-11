@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  var appVersion: string = process.env.APP_VERSION ?? "";
   return (
     <>
       <NavBar />
       {children}
-      <Footer />
+      <Footer AppVersion={appVersion} />
     </>
   )
 }

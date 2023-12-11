@@ -45,7 +45,6 @@ export default function ExperienceTimeline(props: props) {
                 </div>
             </div>
         </li>
-
         // < li className = "grid grid-cols-4" >
         //         <div className="col-span-1 text-right text-xl font-semibold -mt-2 ">
         //             <h4>Software Engineer</h4>
