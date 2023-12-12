@@ -13,17 +13,25 @@ jobExperience:
   - {
       designation: "Software Engineer",
       company: { name: "Empite Pty Ltd", website: "www.Empite.com" },
-      address : "Colombo, Sri Lanka",
+      address: "Colombo, Sri Lanka",
       description: "Empite.pty.ltd",
       website: "Empite.com",
       from: "2022-12-01",
-      to: "2023-08-30",
+      to: "Present",
       projectExperiences:
         [
           {
             name: "Good2Give",
-            description: "",
-            responsibilities: ["asd", "asd"],
+            description: "Workplace donation system for Australia and New Zealand regions, and developed using .Net Core, ASP.Net MVC, EF Core, IdentityServer4, and AWS Services.",
+            responsibilities:
+              [
+                "Working as a Full Stack Developer ( ASP.Net MVC, Blazor, .Net Core, EF Core, RDMS, AWS, IdentityServer4, Google Analytics)",
+                "Maintain code quality",
+                "Optimize existing code performance",
+                "Attend to client tickets and provide support and fixes.",
+                "Manage releases",
+                "Manage documentations (API etc)"
+              ],
             techstack: ["", ""],
             tools: ["", ""],
           },

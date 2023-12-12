@@ -80,14 +80,13 @@ export default function NavBar() {
                         className='relative' />
                     <h1>Projects</h1>
                 </Link >
-                <div
+                {/* <div
                     className={`${Styles.nav_item}`}>
                     <FontAwesomeIcon
                         icon={faFilePdf}
                         className='relative' />
-                    {/* <a href="https://drive.google.com/u/0/uc?id=1g6Yp06BiGdVKoUVy1zAwAYNv32FrW0f4&export=download" download="cv" onClick={onBtnDownloadClick}>Download CV</a> */}
                     <a href='/public/resume -Navithu Sriyananda.pdf'>Donwload CV</a>
-                </div>
+                </div> */}
             </div>
 
             {/* right corner */}
