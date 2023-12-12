@@ -33,18 +33,34 @@ export default function ExperienceTimeline(props: props) {
                         className="text-sm text-blue-700 transition duration-150 ease-in-out hover:text-blue-700-600 focus:text-blue-700-600 active:text-blue-700-700 dark:text-blue-700-400 dark:hover:text-blue-700-500 dark:focus:text-blue-700-500 dark:active:text-blue-700-600"
                     >
                         {`${fromDate.getDate()} ${fromDate.toLocaleDateString('default', { month: "long" })}, ${fromDate.getFullYear()} - 
-                        ${toDate.getDate()} ${toDate.toLocaleDateString('default', { month: "long" })}, ${toDate.getFullYear()}
-                        (${fromDate.getDate()})`}
+                        ${props.experience.to}`}
                     </a>
-                    <p className="mb-4 mt-2 text-neutral-600 dark:text-neutral-300">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat.
-                    </p>
+                    {
+                        props.experience.projectExperiences.map((experience) => {
+                            return (
+                                <div key={experience.name}>
+                                    <p
+                                        className="mb-4 mt-2 text-neutral-600 dark:text-neutral-300" >
+                                        {experience.name} - {experience.description}
+                                    </p>
+                                    <ul className="list-disc">
+                                        {
+                                            experience.responsibilities.map((responsibility) => {
+                                                return (
+                                                    <li key={responsibility} className="list-item">
+                                                        {responsibility}
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
-            </div>
-        </li>
+            </div >
+        </li >
         // < li className = "grid grid-cols-4" >
         //         <div className="col-span-1 text-right text-xl font-semibold -mt-2 ">
         //             <h4>Software Engineer</h4>
