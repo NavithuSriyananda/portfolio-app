@@ -22,7 +22,8 @@
     @apply relative flex justify-center items-center;
     @apply cursor-pointer shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]  hover:bg-neutral-100;
 
-    /* Medium Screen */
+    /* Small Screen */
+    @apply max-sm:hidden;
   }
 
   .nav_item_hover {
