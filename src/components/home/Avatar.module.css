@@ -19,5 +19,21 @@
   .tilt_top_icon {
     @apply absolute bottom-5 text-black/80 antialiased;
     transform: translateZ(8vw);
+
+    /* Small Screen */
+    @apply max-sm:bottom-1;
+  }
+
+  .user_icon {
+    @apply text-[30vh];
+
+    /* Small Screen */
+    @apply max-sm:text-[10vh];
+  }
+  .laptop_icon {
+    @apply text-[10vh];
+
+    /* Small Screen */
+    @apply max-sm:text-[3.5vh];
   }
 }

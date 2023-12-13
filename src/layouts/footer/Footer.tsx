@@ -90,11 +90,6 @@ export default function Footer(props: props) {
                                 icon={faEnvelope} />
                             {data.Email}
                         </p>
-                        <p className="mb-4 flex items-center justify-start">
-                            <FontAwesomeIcon
-                                icon={faPhone} />
-                            {data.Phone}
-                        </p>
                     </div>
                 </div>
             </div>

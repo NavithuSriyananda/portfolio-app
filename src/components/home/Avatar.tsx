@@ -16,9 +16,9 @@ export default function Avatar() {
                 gyroscope={true}
                 className={`${Styles.tilt}`}>
                 <div className={`${Styles.tilt_inner}`}>
-                    <FontAwesomeIcon icon={faUser} className="text-[30vh]" />
+                    <FontAwesomeIcon icon={faUser} className={`${Styles.user_icon}`} />
                     <div className={`${Styles.tilt_top_icon}`}>
-                        <FontAwesomeIcon icon={faLaptopCode} className="text-[10vh]" />
+                        <FontAwesomeIcon icon={faLaptopCode} className={`${Styles.laptop_icon}`}/>
                     </div>
                 </div>
             </Tilt>
