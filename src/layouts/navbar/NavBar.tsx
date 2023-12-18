@@ -84,7 +84,7 @@ export default function NavBar() {
                     <FontAwesomeIcon
                         icon={faFilePdf}
                         className='relative' />
-                    <button onClick={onBtnDownloadClick} >Donwload CV</button>
+                    <button onClick={onBtnDownloadClick} >Download CV</button>
                 </div>
             </div>
 
