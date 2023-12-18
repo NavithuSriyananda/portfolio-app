@@ -10,12 +10,17 @@ import fs, { promises as fsPromises, PathLike } from 'fs';
  * @param {BufferEncoding} encoding [required]
  * @returns {string} { fileContent: string }
  */
-async function ReadFileAsync(filePath: PathLike, encoding: BufferEncoding): Promise<string> {
+async function GetFileContentAsync(filePath: PathLike, encoding: BufferEncoding): Promise<string> {
     const content = fsPromises.readFile(filePath, { encoding: encoding, flag: 'r' });
     return content;
 }
 
+async function GetFileBufferAsync(filePath: PathLike): Promise<Buffer> {
+    const buffer = fsPromises.readFile(filePath, { flag: 'r' });
+    return buffer;
+}
 
 export {
-    ReadFileAsync
+    GetFileContentAsync,
+    GetFileBufferAsync
 }

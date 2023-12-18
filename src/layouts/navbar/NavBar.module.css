@@ -63,4 +63,13 @@
   .right {
     @apply absolute right-0 flex h-full w-fit justify-center items-center mr-2;
   }
+
+  .mobile_navigation {
+    @apply absolute right-0 h-full aspect-square md:hidden max-sm:flex;
+  }
+
+  .btn_download_cv {
+    @apply transition-all duration-500 bg-gradient-to-br from-color-1 from-50% to-color-2 to-50%;
+    @apply bg-[length:200%_200%] bg-[0%_0%] hover:bg-[100%_100%];
+  }
 }
