@@ -26,16 +26,15 @@ export default function NavBar() {
         return () => window.removeEventListener('scroll', scrollHandler);
     }, [top]);
 
-    const onBtnDownloadClick = () => {
-        dispatch({
-            type: AppActionTypes.APP_LOADING_REQUESTED,
-            data: null
-        })
-    }
-
-    const BtnDownloadClick = () => {
-        console.log('clicked download button');
-        fetch('/api/download-cv', { method: 'Get' });
+    const onBtnDownloadClick = async () => {
+        const response = await fetch('/api/download-cv');
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'CV-Navithu Sriyananda.pdf';
+        link.click();
+        window.URL.revokeObjectURL(url);
     }
 
     return (
@@ -80,17 +79,32 @@ export default function NavBar() {
                         className='relative' />
                     <h1>Projects</h1>
                 </Link >
-                {/* <div
-                    className={`${Styles.nav_item}`}>
+                <div
+                    className={`${Styles.nav_item} ${Styles.btn_download_cv}`}>
                     <FontAwesomeIcon
                         icon={faFilePdf}
                         className='relative' />
-                    <a href='/public/resume -Navithu Sriyananda.pdf'>Donwload CV</a>
-                </div> */}
+                    <button onClick={onBtnDownloadClick} >Donwload CV</button>
+                </div>
             </div>
 
             {/* right corner */}
             <div className={`${Styles.right}`}>
+            </div>
+
+            {/* right corner */}
+            <div className={`${Styles.mobile_navigation}`}>
+                {/* <FontAwesomeIcon
+                    icon={faShapes}
+                    className='w-full h-full'
+                /> */}
+                {/* <button className="relative group w-full">
+                    <div className="flex flex-col justify-between w-full h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
+                        <div className="bg-color-1 h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
+                        <div className="bg-color-1 h-[1px] rounded"></div>
+                        <div className="bg-color-1 h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
+                    </div>
+                </button> */}
             </div>
 
 
