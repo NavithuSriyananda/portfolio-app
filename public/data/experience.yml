@@ -22,18 +22,24 @@ jobExperience:
         [
           {
             name: "Good2Give",
-            description: "Workplace donation system for Australia and New Zealand regions, and developed using .Net Core, ASP.Net MVC, EF Core, IdentityServer4, and AWS Services.",
+            description: "Workplace donation system for Australia and New Zealand regions.",
             responsibilities:
               [
-                "Working as a Full Stack Developer ( ASP.Net MVC, Blazor, .Net Core, EF Core, RDMS, AWS, IdentityServer4, Google Analytics)",
-                "Maintain code quality",
-                "Optimize existing code performance",
+                "Assigned as a Full Stack Developer ( ASP.Net MVC, .Net Core, EF Core, RDMS, AWS, IdentityServer4, Google Analytics)",
+                "Maintained code quality and optimized existing code performance.",
                 "Attend to client tickets and provide support and fixes.",
-                "Manage releases",
-                "Manage documentations (API etc)"
+                "Managed releases and documentations (API etc).",
               ],
-            techstack: ["", ""],
-            tools: ["", ""],
+            techstack:
+              [
+                ".Net Core",
+                "AWS",
+                "IdentityServer4",
+                "MSSQL",
+                "MySQL",
+                "Google Analytics",
+              ],
+            tools: ["Visual Studio 2019/2022", "Postman"],
           },
         ],
     }

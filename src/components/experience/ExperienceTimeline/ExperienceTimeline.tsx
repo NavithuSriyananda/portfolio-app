@@ -2,6 +2,7 @@
 
 import { Experience } from "@/data/models/pageModels/ExperiencePageModel"
 import Styles from './ExperienceTimeline.module.css'
+import exp from "constants";
 
 interface props {
     experience: Experience,
@@ -20,10 +21,10 @@ export default function ExperienceTimeline(props: props) {
                 <div className="flex items-center">
                     {
                         props.isFirst &&
-                        <div className="-ml-[13px] -mt-2 mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-color-1 dark:bg-blue-700-500 absolute animate-ping"></div>
+                        <div className="-ml-[13px] -mt-2 mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-color-1 dark:bg-blue-700-500 absolute animate-ping drop-shadow-xl shadow-xl"></div>
 
                     }
-                    <div className="-ml-[13px] -mt-2 mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-color-2 dark:bg-blue-700-500 text-white"></div>
+                    <div className="-ml-[13px] -mt-2 mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-color-2 dark:bg-blue-700-500 text-white drop-shadow-xl shadow-xl"></div>
                     <h4 className="-mt-2 text-xl font-semibold ">{props.experience.company.name}</h4>
                 </div>
                 <div className="mb-6 ml-6 pb-6">
@@ -41,8 +42,21 @@ export default function ExperienceTimeline(props: props) {
                                 <div key={experience.name}>
                                     <p
                                         className="mb-4 mt-2 text-neutral-600 dark:text-neutral-300" >
-                                        {experience.name} - {experience.description}
+                                        <span className="font-bold text-lg">{experience.name}</span> - {experience.description}
                                     </p>
+                                    <div>
+                                        {
+                                            experience.techstack.map((tech) => {
+                                                return (
+                                                    <span key={tech}
+                                                    className="bg-blue-400 p-2 m-1 rounded-lg font-bold shadow-lg">
+                                                        {tech}
+                                                    </span>
+                                                )
+                                            })
+                                        }
+                                    </div>
+                                    <p>Responsibilities and Tasks:</p>
                                     <ul className="list-disc">
                                         {
                                             experience.responsibilities.map((responsibility) => {
