@@ -5,7 +5,7 @@ import Styles from './TypeWriter.module.css'
 import { HomePageModel } from "@/data/models/pageModels/HomePageModel";
 import parse from 'html-react-parser'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSmile } from "@fortawesome/free-solid-svg-icons";
+import { faFaceLaughBeam } from "@fortawesome/free-solid-svg-icons";
 
 export default function TypeWriter(props: HomePageModel) {
 
@@ -45,9 +45,9 @@ export default function TypeWriter(props: HomePageModel) {
                 })
             }
             <div>
-                <span className="text-color-2">-</span>
-                <FontAwesomeIcon icon={faSmile} className="text-color-1" />
-                <span className="text-color-2">-</span>
+                <span className="text-color-1">{'<'}</span>
+                <FontAwesomeIcon icon={faFaceLaughBeam} className="text-color-1" />
+                <span className="text-color-1">{'>'}</span>
             </div>
 
         </div >
