@@ -6,6 +6,7 @@ import Styles from './Footer.module.css'
 import { FooterModel } from "@/data/models/FooterModel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 interface props {
     AppVersion: string
@@ -69,10 +70,10 @@ export default function Footer(props: props) {
                             className="mb-4 flex justify-center font-semibold uppercase">
                             Useful links
                         </h6>
-                        <p className="mb-4">
-                            <a className="text-neutral-600 dark:text-neutral-200"
-                            >Site Roadmap</a>
-                        </p>
+                        <Link href={"/site-roadmap"}
+                            className='mb-4 text-neutral-600 dark:text-neutral-200'>
+                            Site Roadmap
+                        </Link>
                     </div>
                     {/* <!-- Contact section --> */}
                     <div>

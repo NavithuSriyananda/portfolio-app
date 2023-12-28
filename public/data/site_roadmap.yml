@@ -1,0 +1,7 @@
+- { version: 0.7, description: Google Analytics 4 }
+- { version: 0.6, description: "Migrate AppContext -> Redux" }
+- { version: 0.5, description: Mobile navigation menu }
+- { version: 0.4, description: Update yaml files with latest data }
+- { version: 0.3, description: Added site-roadmap page, isLatest: true }
+- { version: 0.2, description: Basic animate styles and download cv button }
+- { version: 0.1, description: inital version }

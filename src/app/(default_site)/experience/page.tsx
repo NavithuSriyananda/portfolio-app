@@ -52,7 +52,7 @@ export default async function ExperiencePage() {
                     <div className={`${Styles.section_header_wrapper}`}>
                         <h1 className={`${Styles.section_header} gradient-line-animation`}>Experience</h1>
                     </div>
-                    <div id='experience-wrapper' className='bg-white/80 col-span-2'>\
+                    <div id='experience-wrapper' className='bg-white/80 col-span-2'>
 
                         <ol className="">
                             {
