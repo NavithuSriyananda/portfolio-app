@@ -44,18 +44,18 @@ export default function ExperienceTimeline(props: props) {
                                         className="mb-4 mt-2 text-neutral-600 dark:text-neutral-300" >
                                         <span className="font-bold text-lg">{experience.name}</span> - {experience.description}
                                     </p>
-                                    <div>
+                                    <ul className="flex flex-wrap">
                                         {
                                             experience.techstack.map((tech) => {
                                                 return (
-                                                    <span key={tech}
-                                                    className="bg-blue-400 p-2 m-1 rounded-lg font-bold shadow-lg">
+                                                    <li key={tech}
+                                                        className="bg-blue-400 p-2 m-1 rounded-lg font-bold shadow-lg">
                                                         {tech}
-                                                    </span>
+                                                    </li>
                                                 )
                                             })
                                         }
-                                    </div>
+                                    </ul>
                                     <p>Responsibilities and Tasks:</p>
                                     <ul className="list-disc">
                                         {
