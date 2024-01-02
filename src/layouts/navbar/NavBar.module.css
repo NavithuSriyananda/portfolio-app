@@ -2,13 +2,16 @@
 
 @layer components {
   .nav {
-    @apply relative justify-center items-center;
+    @apply justify-center items-center;
     @apply backdrop-blur-sm dark:bg-white/30 sticky;
     @apply top-0 z-navbar flex flex-row h-16 min-w-full;
     @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
     @apply animate-enter-from-top;
 
-    @apply max-sm:fixed;
+    /*Mobile*/
+    @apply fixed;
+    /*Desktop*/
+    @apply sm:relative;
   }
 
   .nav.scrolled {
