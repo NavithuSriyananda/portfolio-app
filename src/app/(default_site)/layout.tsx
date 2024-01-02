@@ -10,7 +10,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   return (
     <>
       <NavBar />
-      {children}
+      <div className="relative top-16 sm:top-0">
+        {children}
+      </div>
       <Footer AppVersion={appVersion} />
     </>
   )
