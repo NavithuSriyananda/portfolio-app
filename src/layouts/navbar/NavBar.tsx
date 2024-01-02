@@ -4,7 +4,7 @@
 import Styles from './NavBar.module.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faFilePdf, faUser, faRocket, faProjectDiagram, faShapes } from "@fortawesome/free-solid-svg-icons"
+import { faHome, faFilePdf, faUser, faRocket, faProjectDiagram, faShapes, faClose, faHamburger, faNavicon, faBars, faEllipsis } from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation";
 import Link from "next/link"
@@ -15,6 +15,7 @@ import Image from 'next/image'
 
 export default function NavBar() {
     const [top, setTop] = useState(true);
+    const [showHamburgerMenu, setShowHamburgerMenu] = useState(false);
     const pathName = usePathname();
     const dispatch = UseAppContextDispatch();
 
@@ -37,6 +38,10 @@ export default function NavBar() {
         window.URL.revokeObjectURL(url);
     }
 
+    const onNaviconClick = () => {
+        setShowHamburgerMenu(!showHamburgerMenu)
+    }
+
     return (
         <nav
             className={Styles.nav + ' ' + (top ? '' : Styles.scrolled)}>
@@ -55,56 +60,46 @@ export default function NavBar() {
                 </Link>
             </div>
 
+            {/* right corner */}
+            <div className={`${Styles.mobile_navigation}`}>
+                <FontAwesomeIcon
+                    icon={faEllipsis}
+                    className='w-full h-full'
+                    onClick={onNaviconClick}
+                />
+            </div>
+
             {/* center */}
-            <div className={`${Styles.center}`} >
+            <div className={`${Styles.center} ${showHamburgerMenu && Styles.showHamburgerMenu}`} >
                 <Link href={'/'}
                     className={`${Styles.nav_item} ${Styles.nav_item_hover} ${(pathName == "/" && Styles.current)}`}>
                     <FontAwesomeIcon
-                        icon={faHome}
-                        className='relative' />
+                        icon={faHome} />
                     {/* <h1 className="relative pr-4 pb-1 text-white after:transition-transform after:duration-500 after:ease-out after:absolute after:bottom-0 after:left-0 after:block after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-blue-500 after:content-[''] after:group-hover:origin-bottom-left after:group-hover:scale-x-100">Home</h1> */}
                     <h1 className="">Home</h1>
                 </Link>
                 <Link href={'/experience'}
                     className={`${Styles.nav_item} ${Styles.nav_item_hover} ${(pathName == "/experience" && Styles.current)}`}>
                     <FontAwesomeIcon
-                        icon={faRocket}
-                        className='relative' />
+                        icon={faRocket} />
                     <h1>Experience</h1>
                 </Link>
                 <Link href={'/projects'}
                     className={`${Styles.nav_item} ${Styles.nav_item_hover} ${(pathName == "/projects" && Styles.current)}`}>
                     <FontAwesomeIcon
-                        icon={faShapes}
-                        className='relative' />
+                        icon={faShapes} />
                     <h1>Projects</h1>
                 </Link >
                 <div
                     className={`${Styles.nav_item} ${Styles.btn_download_cv}`}>
                     <FontAwesomeIcon
-                        icon={faFilePdf}
-                        className='relative' />
+                        icon={faFilePdf} />
                     <button onClick={onBtnDownloadClick} >Download CV</button>
                 </div>
             </div>
 
             {/* right corner */}
             <div className={`${Styles.right}`}>
-            </div>
-
-            {/* right corner */}
-            <div className={`${Styles.mobile_navigation}`}>
-                {/* <FontAwesomeIcon
-                    icon={faShapes}
-                    className='w-full h-full'
-                /> */}
-                {/* <button className="relative group w-full">
-                    <div className="flex flex-col justify-between w-full h-[20px] transform transition-all duration-300 group-focus:-rotate-[45deg] origin-center">
-                        <div className="bg-color-1 h-[2px] w-1/2 rounded transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-right delay-75 group-focus:-translate-y-[1px]"></div>
-                        <div className="bg-color-1 h-[1px] rounded"></div>
-                        <div className="bg-color-1 h-[2px] w-1/2 rounded self-end transform transition-all duration-300 group-focus:-rotate-90 group-focus:h-[1px] origin-left delay-75 group-focus:translate-y-[1px]"></div>
-                    </div>
-                </button> */}
             </div>
 
 

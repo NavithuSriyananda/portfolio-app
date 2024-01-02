@@ -7,6 +7,8 @@
     @apply top-0 z-navbar flex flex-row h-16 min-w-full;
     @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
     @apply animate-enter-from-top;
+
+    @apply max-sm:fixed;
   }
 
   .nav.scrolled {
@@ -21,9 +23,6 @@
     /* @apply px-5 py-3 rounded-lg; */
     @apply relative flex justify-center items-center;
     @apply cursor-pointer shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)]  hover:bg-neutral-100;
-
-    /* Small Screen */
-    @apply max-sm:hidden;
   }
 
   .nav_item_hover {
@@ -58,14 +57,28 @@
   }
 
   .center {
-    @apply relative flex flex-row items-center justify-center h-full;
+    /*Mobile*/
+    @apply absolute hidden items-center justify-center h-full right-0 top-16;
+
+    /*Desktop*/
+    @apply sm:relative sm:flex sm:flex-row sm:top-0 sm:w-0;
   }
+
+  .showHamburgerMenu {
+    /*Mobile*/
+    @apply inline-block;
+  }
+
   .right {
-    @apply absolute right-0 flex h-full w-fit justify-center items-center mr-2;
+    @apply absolute right-0 flex h-full justify-center items-center mr-2;
   }
 
   .mobile_navigation {
-    @apply absolute right-0 h-full aspect-square md:hidden max-sm:flex;
+    /*Mobile*/
+    @apply absolute right-0 aspect-square h-full text-center;
+
+    /*Desktop*/
+    @apply sm:hidden;
   }
 
   .btn_download_cv {
