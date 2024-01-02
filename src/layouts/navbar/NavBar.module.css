@@ -11,7 +11,7 @@
     /*Mobile*/
     @apply fixed;
     /*Desktop*/
-    @apply sm:relative;
+    @apply sm:sticky;
   }
 
   .nav.scrolled {
