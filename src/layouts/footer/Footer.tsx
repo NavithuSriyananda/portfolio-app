@@ -81,13 +81,15 @@ export default function Footer(props: props) {
                             className="mb-4 justify-start font-semibold uppercase">
                             Contact
                         </h6>
-                        <p className="mb-4 flex justify-start">
+                        <p className="mb-4 justify-start">
                             <FontAwesomeIcon
+                                className='mr-1'
                                 icon={faHome} />
                             {data.Address}
                         </p>
-                        <p className="mb-4 flex items-center justify-start">
+                        <p className="mb-4 justify-start">
                             <FontAwesomeIcon
+                                className='mr-1'
                                 icon={faEnvelope} />
                             {data.Email}
                         </p>
@@ -97,10 +99,11 @@ export default function Footer(props: props) {
 
             {/* <!--Copyright section--> */}
             <div className=" bg-neutral-200 p-6 text-center dark:bg-neutral-700">
-                <span>v{props.AppVersion} ©2023 Copyright : </span>
+                <span>Designed and Developed by : </span>
                 <span className="font-semibold text-neutral-600 dark:text-neutral-400">
                     Navithu Sriyananda
                 </span>
+                <p>v{props.AppVersion} ©2024</p>
             </div>
         </div>
     )
