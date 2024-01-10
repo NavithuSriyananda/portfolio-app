@@ -78,7 +78,7 @@
 
   .mobile_navigation {
     /*Mobile*/
-    @apply absolute right-0 aspect-square h-full text-center;
+    @apply absolute right-0 aspect-square h-full text-center justify-center mr-2;
 
     /*Desktop*/
     @apply sm:hidden;

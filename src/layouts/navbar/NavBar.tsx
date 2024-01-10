@@ -94,7 +94,7 @@ export default function NavBar() {
                     className={`${Styles.nav_item} ${Styles.btn_download_cv}`}>
                     <FontAwesomeIcon
                         icon={faFilePdf} />
-                    <button onClick={onBtnDownloadClick} >Download CV</button>
+                    <button className='whitespace-nowrap' onClick={onBtnDownloadClick}>Download CV</button>
                 </div>
             </div>
 
