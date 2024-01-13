@@ -30,15 +30,15 @@ export default function ProjectCard(project: Project) {
                 <h1 className={`${Styles.project_header}`}>
                     {project.title}
                 </h1>
-                <div className={`${Styles.project_description}`}>
+                <p className={`${Styles.project_description}`}>
                     {parse(project.description)}
-                </div>
+                </p>
                 <div className={`${Styles.links_wrapper}`}>
                     {
                         project.links?.map((link, index) => {
                             return (
                                 <Link key={index} className={`${Styles.link} noopenner`} href={link.url ?? ''} target='_blank'>
-                                    {link.name} - {link.url}
+                                    {link.name}
                                 </Link>
                             )
                         })
@@ -48,4 +48,4 @@ export default function ProjectCard(project: Project) {
 
         </section>
     )
-} 
+}

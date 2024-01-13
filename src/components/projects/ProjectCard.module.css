@@ -2,37 +2,36 @@
 
 @layer components {
   .project_section {
-    @apply relative flex flex-row m-5 p-5 rounded-lg;
+    @apply grid grid-cols-4 m-5 p-5 rounded-lg;
     @apply shadow-[0px_0px_1px_1px_rgb(38,38,38,0.1)];
     @apply animate-enter-from-top;
   }
 
   .project_left_pane {
-    @apply basis-1/4 items-center justify-center;
+    @apply items-center justify-center col-span-1;
+  }
+
+  .project_right_pane {
+    @apply bg-white/80 rounded-lg col-span-3;
+    @apply items-center;
   }
 
   .project_logo_wrapper {
     @apply w-full aspect-square sticky top-28;
   }
 
-  .project_right_pane {
-    @apply flex flex-col basis-3/4 bg-white/80 rounded-lg;
-    @apply grid grid-rows-4;
-    @apply items-center;
-  }
-
   .project_header {
-    @apply row-span-1 text-[6vh] bg-white/90;
+    @apply text-[6vh] bg-white/90;
   }
   .project_description {
-    @apply relative row-span-2 mt-0 h-full;
+    @apply mt-0;
   }
 
   .links_wrapper {
-    @apply row-span-1 relative flex flex-col items-center justify-center;
+    @apply bg-white flex flex-col items-center;
   }
 
   .link {
-    @apply bg-white w-fit rounded-full border-x-color-2 border-y-color-1 border-[1px] shadow-lg m-1 p-1;
+    @apply bg-white w-full rounded-full border-x-color-2 border-y-color-1 border-[1px] shadow-lg m-1 p-1;
   }
 }
