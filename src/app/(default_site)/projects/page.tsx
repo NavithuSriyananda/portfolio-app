@@ -13,7 +13,6 @@ export default async function ProjectsPage() {
         <main className="relative">
 
             <div id="projects-wrapper" className={`${Styles.projects_wrapper}`}>
-
                 {
                     data.Projects?.map((project, index) => {
                         return (

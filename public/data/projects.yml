@@ -2,7 +2,7 @@ Projects:
   - {
       title: "Nova Control Center",
       logo: "nova.png",
-      description: "<b>Nova Control Center</b> is a desktop application which can be used to control your windows PC. A bit old project with legacy components.",
+      description: "<b>Nova Control Center</b> <span>is a desktop application which can be used to control your windows PC. A bit old project with legacy components.</span>",
       links:
         [
           { name: "Github (source code)", url: "https://www.github.com" },
