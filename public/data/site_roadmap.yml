@@ -3,7 +3,7 @@
 - { version: 0.5, description: Update yaml files with latest data }
 - {
     version: 0.4,
-    description: "Google Analytics 4 and Google tag Manager configured",
+    description: "Google Analytics 4 and Google Tag Manager configured",
     isLatest: true,
   }
 - { version: 0.3, description: Added site-roadmap page }
