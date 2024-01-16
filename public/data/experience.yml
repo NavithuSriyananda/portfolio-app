@@ -3,10 +3,16 @@ skillSet:
   - { name: "EF Core", icon: "EFCore.png" }
   - { name: "ASP .NET Core", icon: "ASPNET-Core.png" }
   - { name: ".Net Framework", icon: "NET-Framework.png" }
+  - { name: "React - Redux", icon: "redux.svg" }
+  - { name: "Next.js", icon: "next-js.svg" }
+  - { name: "AWS", icon: "aws.png" }
+  - { name: "Azure", icon: "azure.png" }
 tools:
   - { name: "Visual Studio", icon: "vs.png" }
   - { name: "Visual Studio Code", icon: "vscode.png" }
   - { name: "Postman", icon: "postman.png" }
+  - { name: "Google Analytics 4", icon: "ga4.svg" }
+  - { name: "Tag Manager", icon: "tag_manager.svg" }
   - { name: "Docker", icon: "docker.png" }
   - { name: "Git", icon: "git.png" }
 jobExperience:
