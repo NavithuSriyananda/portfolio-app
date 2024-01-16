@@ -3,6 +3,7 @@
 import { UseAppContext } from "@/context/AppContext"
 import { faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Fragment } from "react";
 
 export default function PageLoader() {
     const appState = UseAppContext();
@@ -14,7 +15,7 @@ export default function PageLoader() {
         )
     } else {
         return (
-            <></>
+            <Fragment />
         )
     }
 }
