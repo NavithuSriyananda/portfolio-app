@@ -18,34 +18,74 @@ tools:
 jobExperience:
   - {
       designation: "Software Engineer",
-      company: { name: "Empite Pty Ltd", website: "www.Empite.com" },
+      company: "Empite Pty Ltd",
       address: "Colombo, Sri Lanka",
       description: "Empite.pty.ltd",
       website: "Empite.com",
       from: "2022-12-01",
-      to: "Present",
+      to: "",
+      responsibilities:
+        [
+          "Work as a Full Stack - Software Engineer (ASP.Net MVC, Blazor, .Net Core, EF Core, AWS, IdentityServer4, Google Analytics)",
+          "Maintain code quality and efficiency for high-performance results",
+          "Develop and maintain public Web APIs and Web Apps",
+          "Migrate legacy and outdated packages, services and apps",
+          "Implement and manage Authorization and Authentication in Web APIs and Web Apps",
+          "Address client tickets and provide support",
+          "Conduct client demos and presentations",
+          "Oversee release management",
+          "Maintain and update API and support documentations",
+        ],
+      techstack:
+        [
+          ".Net Core",
+          "AWS",
+          "IdentityServer4",
+          "MSSQL",
+          "MySQL",
+          "Google Analytics",
+        ],
+      tools: ["Visual Studio 2019/2022", "Postman"],
       projectExperiences:
         [
           {
             name: "Good2Give",
             description: "Workplace donation system for Australia and New Zealand regions.",
-            responsibilities:
-              [
-                "Assigned as a Full Stack Developer ( ASP.Net MVC, .Net Core, EF Core, RDMS, AWS, IdentityServer4, Google Analytics)",
-                "Maintained code quality and optimized existing code performance.",
-                "Attend to client tickets and provide support and fixes.",
-                "Managed releases and documentations (API etc).",
-              ],
-            techstack:
-              [
-                ".Net Core",
-                "AWS",
-                "IdentityServer4",
-                "MSSQL",
-                "MySQL",
-                "Google Analytics",
-              ],
-            tools: ["Visual Studio 2019/2022", "Postman"],
           },
+          {
+            name: "Good2Give Voucher",
+            description: "Voucher redeem system developed as an addition to Good2Give system.",
+          },
+          {
+            name: "Cubis",
+            description: "Asset management system for Australia and New Zealand regions. Main features are keep track of assets like properties, stocks etc and track current market values.",
+          },
+          { name: "Quilo(SetId)", description: "Employee management system." },
         ],
+    }
+  - {
+      designation: "Software Engineer",
+      company: "Acentura",
+      address: "Colombo, Sri Lanka",
+      description: "Acentura",
+      website: "Empite.com",
+      from: "2022-10-01",
+      to: "2022-12-01",
+      responsibilities: [],
+      techstack: [],
+      tools: [],
+      projectExperiences: [],
+    }
+  - {
+      designation: "Associate Software Engineer",
+      company: "Acentura",
+      address: "Colombo, Sri Lanka",
+      description: "Acentura",
+      website: "Empite.com",
+      from: "2022-04-01",
+      to: "2022-10-01",
+      responsibilities: [],
+      techstack: [],
+      tools: [],
+      projectExperiences: [],
     }

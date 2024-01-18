@@ -52,17 +52,13 @@ export default async function ExperiencePage() {
                     <div className={`${Styles.section_header_wrapper}`}>
                         <h1 className={`${Styles.section_header} gradient-line-animation`}>Experience</h1>
                     </div>
-                    <div id='experience-wrapper' className='bg-white/80 col-span-2'>
+                    <div id='experience-wrapper' className='bg-white/40 w-full'>
 
                         <ol className="">
                             {
                                 data.jobExperience?.map((experience, index) => {
                                     return (
-                                        <div key={index}>
-                                            <div className='p-6'>
-                                            </div>
-                                            <ExperienceTimeline isFirst={true} experience={experience} />
-                                        </div>
+                                        <ExperienceTimeline key={index} isFirst={index == 0 ? true : false} experience={experience} />
                                     )
                                 })
                             }
