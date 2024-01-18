@@ -10,14 +10,14 @@ interface props {
 }
 export default function ExperienceTimeline(props: props) {
     const fromDate = new Date(props.experience.from);
-    const toDate = new Date(props.experience.to);
+    const toDate = props.experience.to ? new Date(props.experience.to) : "Present";
     return (
 
         <li className="grid grid-cols-8" >        {/* <!--First item--> */}
             <div className=" col-start-2 col-span-1 text-right text-xl font-semibold -mt-2 ">
                 <h4>{props.experience.designation}</h4>
             </div>
-            <div className="col-span-5 border-l-2 border-color-2 dark:border-blue-700-500 ml-10">
+            <div className="col-start-3 col-span-5 border-l-2 border-color-2 dark:border-blue-700-500 ml-10">
                 <div className="flex items-center">
                     {
                         props.isFirst &&
@@ -25,7 +25,7 @@ export default function ExperienceTimeline(props: props) {
 
                     }
                     <div className="-ml-[13px] -mt-2 mr-3 flex h-6 w-6 items-center justify-center rounded-full bg-color-2 dark:bg-blue-700-500 text-white drop-shadow-xl shadow-xl"></div>
-                    <h4 className="-mt-2 text-xl font-semibold ">{props.experience.company.name}</h4>
+                    <h4 className="-mt-2 text-xl font-semibold ">{props.experience.company}</h4>
                 </div>
                 <div className="mb-6 ml-6 pb-6">
                     <p>{props.experience.address}</p>
@@ -33,45 +33,49 @@ export default function ExperienceTimeline(props: props) {
                         href="#!"
                         className="text-sm text-blue-700 transition duration-150 ease-in-out hover:text-blue-700-600 focus:text-blue-700-600 active:text-blue-700-700 dark:text-blue-700-400 dark:hover:text-blue-700-500 dark:focus:text-blue-700-500 dark:active:text-blue-700-600"
                     >
-                        {`${fromDate.getDate()} ${fromDate.toLocaleDateString('default', { month: "long" })}, ${fromDate.getFullYear()} - 
-                        ${props.experience.to}`}
+                        {`${fromDate.getDate()} ${fromDate.toLocaleDateString('default', { month: "long" })}, ${fromDate.getFullYear()} - `}
+                        {
+                            toDate == "Present"
+                                ? toDate
+                                : `${toDate.getDate()} ${toDate.toLocaleDateString('default', { month: "long" })}, ${toDate.getFullYear()}`
+                        }
                     </a>
-                    {
-                        props.experience.projectExperiences.map((experience) => {
-                            return (
-                                <div key={experience.name}>
-                                    <p
-                                        className="mb-4 mt-2 text-neutral-600 dark:text-neutral-300" >
-                                        <span className="font-bold text-lg">{experience.name}</span> - {experience.description}
-                                    </p>
-                                    <ul className="flex flex-wrap">
-                                        {
-                                            experience.techstack.map((tech) => {
-                                                return (
-                                                    <li key={tech}
-                                                        className="bg-blue-400 p-2 m-1 rounded-lg font-bold shadow-lg">
-                                                        {tech}
-                                                    </li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                    <p>Responsibilities and Tasks:</p>
-                                    <ul className="list-disc">
-                                        {
-                                            experience.responsibilities.map((responsibility) => {
-                                                return (
-                                                    <li key={responsibility} className="list-item">
-                                                        {responsibility}
-                                                    </li>
-                                                )
-                                            })
-                                        }
-                                    </ul>
-                                </div>
-                            )
-                        })
-                    }
+                    <ol className="flex flex-wrap">
+                        {
+                            props.experience.techstack.map((tech) => {
+                                return (
+                                    <li key={tech}
+                                        className="bg-blue-400 p-2 m-1 rounded-lg font-bold shadow-lg">
+                                        {tech}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ol>
+                    <p className="font-bold text-lg mt-2">Responsibilities and Activities:</p>
+                    <ol className="list-disc">
+                        {
+                            props.experience.responsibilities.map((responsibility) => {
+                                return (
+                                    <li key={responsibility} className="list-item">
+                                        {responsibility}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ol>
+                    <p className="font-bold text-lg mt-2">Projects Involved:</p>
+                    <ol className="list-disc">
+                        {
+                            props.experience.projectExperiences.map((experience) => {
+                                return (
+                                    <li key={experience.name} className="mb-4 text-neutral-600 dark:text-neutral-300">
+                                        {experience.name} - {experience.description}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ol>
                 </div>
             </div >
         </li >

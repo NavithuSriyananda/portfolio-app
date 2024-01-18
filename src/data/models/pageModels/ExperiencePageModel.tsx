@@ -6,22 +6,21 @@ export interface ExperiencePageModel {
 
 export type Experience = {
   designation: string;
-  company: Company;
+  company: string;
   address: string;
   description: string;
   website: string;
   from: Date;
   to: Date;
+  responsibilities: Array<string>;
+  techstack: Array<string>;
+  tools: Array<string>;
   projectExperiences: Array<ProjectExperience>;
 };
 
 export type ProjectExperience = {
   name: string;
   description: string;
-  website: string;
-  responsibilities: Array<string>;
-  techstack: Array<string>;
-  tools: Array<string>;
 };
 
 export type Skill = {
@@ -39,8 +38,3 @@ export type Project = {
   description: string;
   links: Array<string>;
 };
-
-export type Company = {
-  name: string;
-  website: string;
-}
