@@ -10,6 +10,7 @@ import ParticleBackground from "@/layouts/ParticleBackground";
 import { AppContextProvider } from '@/context/AppContext';
 import PageLoader from "@/layouts/PageLoader";
 import { GoogleTagManager } from '@next/third-parties/google'
+import { env } from "process";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -27,7 +28,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         {children}
                         <ParticleBackground />
                     </body>
-                    <GoogleTagManager gtmId="GTM-TMTQG7HN" />
+                    {
+                        env.NODE_ENV === 'production' &&
+                        <GoogleTagManager gtmId="GTM-TMTQG7HN" />
+                    }
                 </html>
             </AppContextProvider>
         </React.StrictMode>

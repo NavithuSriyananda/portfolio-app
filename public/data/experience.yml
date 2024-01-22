@@ -20,7 +20,7 @@ jobExperience:
       designation: "Software Engineer",
       company: "Empite Pty Ltd",
       address: "Colombo, Sri Lanka",
-      description: "Empite.pty.ltd",
+      description: "Empite pty ltd",
       website: "Empite.com",
       from: "2022-12-01",
       to: "",
@@ -68,7 +68,7 @@ jobExperience:
       company: "Acentura",
       address: "Colombo, Sri Lanka",
       description: "Acentura",
-      website: "Empite.com",
+      website: "Acentura.com",
       from: "2022-10-01",
       to: "2022-12-01",
       responsibilities: [],
@@ -81,11 +81,74 @@ jobExperience:
       company: "Acentura",
       address: "Colombo, Sri Lanka",
       description: "Acentura",
-      website: "Empite.com",
+      website: "Acentura.com",
       from: "2022-04-01",
       to: "2022-10-01",
-      responsibilities: [],
+      responsibilities:
+        [
+          "Work as a Full Stack - Software Engineer ( .Net Core, EF Core, NodeJs, ReactJs, Material UI, AWS)",
+          "Maintain code quality and efficiency for high-performance results",
+          "Educate and train other team members",
+          "Implement and maintain CI/CD pipelines in AWS and Azure",
+          "Maintain and update API and support documentations",
+          "Develop .Net apps and Azure Function Apps",
+          "Research and optimize LINQ queries",
+          "Manage unit tests",
+          "Develop ReactJs and NodeJs apps",
+        ],
+      techstack: [.Net Core, EF Core, NodeJs, ReactJs, Material UI, AWS, Azure],
+      tools: [Postman],
+      projectExperiences:
+        [
+          {
+            name: MAS Stock Counting Tool,
+            description: "Stock tracking system developed using .Net Core, ReactJs, Java and Azure Services. The system consists of Web App, Backend App, Android App and Azure Function Apps.",
+          },
+          {
+            name: Employee Project Management System,
+            description: "Management system for employee project allocation. Main features are allocate, deallocate, handle allocation expiration and view current employee project allocation summary.",
+          },
+        ],
+    }
+  - {
+      designation: "Junior Software Engineer",
+      company: "Insighture",
+      address: "Colombo, Sri Lanka",
+      description: "Insighture",
+      website: "Insighture.com",
+      from: "2021-05-01",
+      to: "2022-04-01",
+      responsibilities:
+        [
+          "Develop templates to capture content in correct hierarchy",
+          "Write efficient code",
+          "Work with QA team to release bug fixes",
+        ],
+      techstack: [.Net C#],
+      tools: [],
+      projectExperiences:
+        [
+          {
+            name: CUBE Regulatory Content Management,
+            description: "Regulatory management system. Main features are view captured regulatory content, regulatory content change detection.",
+          },
+        ],
+    }
+  - {
+      designation: "Junior QA Engineer",
+      company: "Insighture",
+      address: "Colombo, Sri Lanka",
+      description: "Insighture",
+      website: "Insighture.com",
+      from: "2020-02-01",
+      to: "2021-05-01",
+      responsibilities:
+        ["Closely work with dev teams to identify and fix bugs"],
       techstack: [],
       tools: [],
-      projectExperiences: [],
+      projectExperiences:
+        [
+          { name: Oho, description: "" },
+          { name: CUBE Regulatory Content Management, description: "" },
+        ],
     }

@@ -3,6 +3,7 @@
 import { Experience } from "@/data/models/pageModels/ExperiencePageModel"
 import Styles from './ExperienceTimeline.module.css'
 import exp from "constants";
+import React from "react";
 
 interface props {
     experience: Experience,
@@ -52,30 +53,43 @@ export default function ExperienceTimeline(props: props) {
                             })
                         }
                     </ol>
-                    <p className="font-bold text-lg mt-2">Responsibilities and Activities:</p>
-                    <ol className="list-disc">
-                        {
-                            props.experience.responsibilities.map((responsibility) => {
-                                return (
-                                    <li key={responsibility} className="list-item">
-                                        {responsibility}
-                                    </li>
-                                )
-                            })
-                        }
-                    </ol>
-                    <p className="font-bold text-lg mt-2">Projects Involved:</p>
-                    <ol className="list-disc">
-                        {
-                            props.experience.projectExperiences.map((experience) => {
-                                return (
-                                    <li key={experience.name} className="mb-4 text-neutral-600 dark:text-neutral-300">
-                                        {experience.name} - {experience.description}
-                                    </li>
-                                )
-                            })
-                        }
-                    </ol>
+
+                    {
+                        props.experience.responsibilities.length > 0 &&
+                        <React.Fragment>
+                            <p className="font-bold text-lg mt-2">Responsibilities and Activities:</p>
+                            <ol className="list-disc">
+                                {
+                                    props.experience.responsibilities.map((responsibility) => {
+                                        return (
+                                            <li key={responsibility} className="list-item">
+                                                {responsibility}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ol>
+                        </React.Fragment>
+                    }
+
+                    {
+                        props.experience.projectExperiences.length > 0 &&
+                        <React.Fragment>
+                            <p className="font-bold text-lg mt-2">Projects Involved:</p>
+                            <ol className="list-disc">
+                                {
+                                    props.experience.projectExperiences.map((experience) => {
+                                        return (
+                                            <li key={experience.name} className="mb-4 text-neutral-600 dark:text-neutral-300">
+                                                {experience.name} - {experience.description}
+                                            </li>
+                                        )
+                                    })
+                                }
+                            </ol>
+                        </React.Fragment>
+                    }
+
                 </div>
             </div >
         </li >
