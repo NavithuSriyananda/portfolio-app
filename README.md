@@ -36,4 +36,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## NPM commands
 
 npm outdated - Get list of outdated packages
+
 npm update --save - Update all dependencies and pakages.json
