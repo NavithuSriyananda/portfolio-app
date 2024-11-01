@@ -33,7 +33,7 @@ export default function NavBar() {
         const url = window.URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = 'CV-Navithu Sriyananda.pdf';
+        link.download = 'NavithuSriyananda-Resume.pdf';
         link.click();
         window.URL.revokeObjectURL(url);
     }
@@ -94,7 +94,7 @@ export default function NavBar() {
                     className={`${Styles.nav_item} ${Styles.btn_download_cv}`}>
                     <FontAwesomeIcon
                         icon={faFilePdf} />
-                    <button className='whitespace-nowrap' onClick={onBtnDownloadClick}>Download CV</button>
+                    <button className='whitespace-nowrap' onClick={onBtnDownloadClick}>Download Resume</button>
                 </div>
             </div>
 
